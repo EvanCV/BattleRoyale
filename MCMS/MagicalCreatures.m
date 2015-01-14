@@ -7,7 +7,26 @@
 //
 
 #import "MagicalCreatures.h"
+#import "CreatureViewController.h"
 
 @implementation MagicalCreatures
 
+
+//Initialize creature object with necessary properties
+- (instancetype)initWithName:(NSString *)creatureName :(NSString *)creatureDescription :(UIImage *)creaturePic
+{
+    self = [super init];
+    if (self)
+    {
+        self.name = creatureName;
+        self.detail = creatureDescription;
+        self.pic = creaturePic;
+        self.accessories = [NSMutableArray new];
+    }
+
+    return self;
+}
+
 @end
+
+
